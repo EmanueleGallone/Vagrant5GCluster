@@ -21,6 +21,15 @@ Connect to the UE container
 sudo docker exec -it ue bash
 ```
 
+List all the UEs
+```
+ifconfig
+```
+
+Verify the connection to internet
+```
+ping 8.8.8.8 -I oaitun_ue1
+```
 
 
 # Warning
