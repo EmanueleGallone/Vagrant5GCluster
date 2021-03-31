@@ -24,10 +24,10 @@ docker exec -it ue bash
 
 
 # Warning
-Setting up the VMs will take approximately ~ 10-15 minutes.
+Setting up the VMs will take approximately ~ 15-20 minutes.
 
 
 # External links
-Free5gc vm setup scripts [link](https://github.com/LABORA-INF-UFG/NetSoft2020-Tutorial4-Demo2-Exp1)
-Vagrant provision scripts partially forked from [randy-stad](https://github.com/randy-stad/k3s-vagrant-cluster/blob/master/)
+*Free5gc vm setup scripts [link](https://github.com/LABORA-INF-UFG/NetSoft2020-Tutorial4-Demo2-Exp1)
+*Vagrant provision scripts partially forked from [randy-stad](https://github.com/randy-stad/k3s-vagrant-cluster/blob/master/)
 
