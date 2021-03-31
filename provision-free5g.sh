@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eux
 
+#this interface is the one connecting the vm to Internet.
 INTERFACE="'eth1'"
 
 #install basic packages
