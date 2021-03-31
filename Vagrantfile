@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
       v.cpus = 8
     end
 
-    config.vm.provision "shell" , path: "provision-free5g.sh"
+    h.vm.provision "shell" , path: "provision-free5g.sh"
   end
 
   #configure k3s master
@@ -48,23 +48,23 @@ Vagrant.configure("2") do |config|
   end
 
   #config agent
-  config.vm.define "lithium" do |h|
-    h.vm.box = "bento/ubuntu-18.04"
-    h.vm.hostname = 'lithium'
+  config.vm.define "lithium" do |l|
+    l.vm.box = "bento/ubuntu-18.04"
+    l.vm.hostname = 'lithium'
     #h.disksize.size = '50GB'
     #h.vm.box_url = "ubuntu/precise64"
     private_ip = "192.168.56.3"
 
-    h.vm.network :private_network, ip: private_ip, netmask: "255.255.255.0", auto_config: true
+    l.vm.network :private_network, ip: private_ip, netmask: "255.255.255.0", auto_config: true
 
-    h.vm.provider :virtualbox do |v|
+    l.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--memory", 2048]
       v.customize ["modifyvm", :id, "--name", "lithium"]
       v.cpus = 4
     end
 
-    h.vm.provision "shell", path: 'provision-agent.sh', args: [$k3s_token, master_ip, private_ip]
+    l.vm.provision "shell", path: 'provision-agent.sh', args: [$k3s_token, master_ip, private_ip]
   end
 
 
