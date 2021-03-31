@@ -16,8 +16,8 @@ if [[ $(which docker) && $(docker --version) ]]; then
 fi
 
 #configure docker
-sudo groupadd docker
-sudo usermod -aG docker $USER
+#sudo groupadd docker
+#sudo usermod -aG docker $USER
 
 #clone Netsoft free5gc repo and install
 git clone https://github.com/LABORA-INF-UFG/NetSoft2020-Tutorial4-Demo2-Exp1.git

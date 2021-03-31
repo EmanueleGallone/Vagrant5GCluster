@@ -13,12 +13,12 @@ vagrant ssh hydrogen
 
 Verify that free5gc containers are running
 ```
-docker ps
+sudo docker ps
 ```
 
 Connect to the UE container
 ```
-docker exec -it ue bash
+sudo docker exec -it ue bash
 ```
 
 
