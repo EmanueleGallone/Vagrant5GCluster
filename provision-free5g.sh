@@ -1,4 +1,5 @@
-echo "Hello world from vagrant provision"
+#!/bin/bash
+set -eux
 
 INTERFACE="'eth1'"
 
