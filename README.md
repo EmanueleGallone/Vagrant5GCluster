@@ -1,7 +1,13 @@
 Providing an emulated MEC (Mobile edge computing) environment through vagrant.
 
 # Getting Started
-git clone this repository. Then
+git clone this repository.
+
+Edit the root password used by ansible-playbook, inside the provision script (within the --extra-vars argument)
+```
+nano provision-free5g.sh
+```
+Then
 ```
 vagrant up
 ```
