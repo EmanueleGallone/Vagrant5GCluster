@@ -20,6 +20,6 @@ fi
 #sudo usermod -aG docker $USER
 
 #clone Netsoft free5gc repo and install
-git clone https://github.com/LABORA-INF-UFG/NetSoft2020-Tutorial4-Demo2-Exp1.git
+git clone https://github.com/EmanueleGallone/NetSoft2020-Tutorial4-Demo2-Exp1.git
 cd NetSoft2020-Tutorial4-Demo2-Exp1/
 ansible-playbook -K Demo2Exp1.yml  -e  "internet_network_interface=$INTERFACE" --extra-vars "ansible_become_pass=root"
