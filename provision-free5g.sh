@@ -7,17 +7,6 @@ INTERFACE="'eth1'"
 sudo apt-get update
 sudo apt-get install curl git net-tools ansible -y
 
-# install docker
-if [[ $(which docker) && $(docker --version) ]]; then
-    echo "skipping docker install"
-  else
-    echo "Install docker"
-    curl -fsSL https://get.docker.com | sh
-fi
-
-#configure docker
-#sudo groupadd docker
-#sudo usermod -aG docker $USER
 
 #clone Netsoft free5gc repo and install
 git clone https://github.com/EmanueleGallone/NetSoft2020-Tutorial4-Demo2-Exp1.git
